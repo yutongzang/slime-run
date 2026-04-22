@@ -18,7 +18,10 @@ function updatePlayer() {
     triggerDeathAnim();
     return;
   }
-
+    if (player.x < -40) {
+    triggerDeathAnim();
+    return;
+  }
   let touchingBump = false;
 
  for (let p of platforms) {
