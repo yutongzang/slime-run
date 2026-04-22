@@ -145,6 +145,14 @@ document.addEventListener('mousedown', function() {
         mouseY > colorBtnY && mouseY < colorBtnY + colorBtnH) {
       gamePhase = 'recolor';
     }
+  let btnX = width / 2 - 85;
+  let btnY = height / 2 + 50;
+  let btnW = 170;
+  let btnH = 44;
+  if (mouseX > btnX && mouseX < btnX + btnW &&
+      mouseY > btnY && mouseY < btnY + btnH) {
+    restartGame();
+  }
   }
 
   if (gamePhase === 'recolor') {
